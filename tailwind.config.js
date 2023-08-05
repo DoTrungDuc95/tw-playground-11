@@ -7,12 +7,28 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        teal: '#2F6C6D',
+        hummingBird: '#d1f1ee',
+        yellow: '#e4d63b',
+        solitude: '#e9e9ea',
+        gray: '#4B4B4C',
       },
+      animation: {
+        slide: 'slide 25s linear infinite',
+      },
+      keyframes: {
+        slide: {
+          '0%,100%': { transform: 'translateX(5%)' },
+          '50%': { transform: 'translateX(-120%)' },
+        },
+      },
+    },
+    screens: {
+      xs: '480px',
+      sm: '768px',
+      md: '1060px',
     },
   },
   plugins: [],
-}
+};

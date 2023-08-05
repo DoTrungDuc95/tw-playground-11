@@ -2,26 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@layer base {
+  img {
+    @apply max-w-full h-auto;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  .section {
+    @apply container mx-auto mb-24 px-6;
+  }
+
+  .bd-gray {
+    @apply border-2 border-solid border-gray;
+  }
+
+  .animate-slide:hover {
+    animation-play-state: paused;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer components {
+  .btn-type-1 {
+    @apply px-6 py-3 font-bold text-sm rounded-lg;
+  }
+
+  .description {
+    @apply text-sm text-gray leading-7;
+  }
+
+  .course-icon {
+    @apply bg-solitude p-1 rounded-full;
+  }
+
+  .course-flex-with-icon {
+    @apply flex items-center gap-1;
+  }
+
+  .grid-2-col {
+    @apply grid md:grid-cols-2 gap-8 place-items-center;
+  }
 }
+
+/* :root {
+}
+
+body {
+} */
